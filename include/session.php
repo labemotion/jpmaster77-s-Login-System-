@@ -8,12 +8,13 @@
  * Written by: Jpmaster77 a.k.a. The Grandmaster of C++ (GMC)
  * Last Updated: June 15, 2011 by Ivan Novak
  */
+
 include("database.php");
 include("mailer.php");
 include("form.php");
 
-class Session
-{
+
+class Session {
    var $username;     //Username given on sign-up
    var $userid;       //Random value generated on current login
    var $userlevel;    //The level to which the user pertains
@@ -29,7 +30,7 @@ class Session
     */
 
    /* Class constructor */
-   function Session(){
+   function __construct(){
       $this->time = time();
       $this->startSession();
    }
@@ -137,7 +138,7 @@ class Session
       $field = "user";  //Use field name for username
 	  $q = "SELECT valid FROM ".TBL_USERS." WHERE username='$subuser'";
 	  $valid = $database->query($q);
-	  $valid = mysql_fetch_array($valid);
+	  $valid = mysqli_fetch_array($valid);
 	  	      
       if(!$subuser || strlen($subuser = trim($subuser)) == 0){
          $form->setError($field, "* Username not entered");
@@ -191,7 +192,6 @@ class Session
          return false;
       }
       
-
 
       /* Username and password correct, register session variables */
       $this->userinfo  = $database->getUserInfo($subuser);
@@ -511,7 +511,7 @@ class Session
          }
          return $post;
    }
-};
+}
 
 
 /**

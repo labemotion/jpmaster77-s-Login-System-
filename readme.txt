@@ -1,5 +1,6 @@
 Readme.txt
 ==========
+<h1>This PHP Login System</h1>
 
 I wanted to do something good for the community by putting this up on GitHub.  The code is several years old, first published in 2004 by jpmaster77.  This code has been particularly useful to me and many others as referenced by the 44 pages of comments this script has now and is still receiving two or three comments per day (5 years later!).
 
