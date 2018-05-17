@@ -2,11 +2,10 @@
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title></title>
+
 </head>
 <body>
-Readme.txt<br>
-==========<br>
+
 <h1>PHP Login System</h1>
 <br>
 This version is updating Mysqli and included Boostrap.<br>
